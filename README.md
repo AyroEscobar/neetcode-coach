@@ -7,16 +7,18 @@ Open the repo in Claude Code, ask it to load a problem, and it acts as a mentor 
 ## How it works
 
 1. Open the repo in Claude Code: `cd neetcode-coach && claude`
-2. Pick a problem: `/problem two-sum` (it scaffolds the directory, opens the LeetCode page in your browser, and sets it as the current problem)
-3. Write your attempt in `problems/<slug>/Solution.java`. Jot your thinking in `notes.md`.
-4. Stuck? `/hint` escalates one level:
+2. Talk to it. *"Let's start"* — it picks up where you left off (or recommends Contains Duplicate if it's a fresh start), opens the LeetCode page, and asks for your first idea.
+3. Write your attempt in `problems/<slug>/Solution.java`. Jot your thinking in `notes.md` (or just dictate to the coach — it'll log thinking as needed).
+4. Stuck? Say *"I'm stuck"* or *"give me a hint."* The coach escalates one level:
    - **L1** — reframe / leading question
    - **L2** — name a category of technique
    - **L3** — name the specific technique
-   - **/spoil** — last-resort prose sketch of the algorithm (still no code)
-5. Solved? `/review` walks you through articulating the pattern, complexity, edge cases.
+   - *"spoil it"* — last-resort prose sketch of the algorithm (still no code)
+5. Solved? Say *"let's review."* The coach walks you through articulating the pattern, complexity, edge cases.
 
-The coach never writes Solution code. Ever.
+**The coach never writes Solution code. Ever.**
+
+Slash commands (`/problem`, `/hint`, `/stuck`, `/review`, `/open`, `/spoil`) work too — they're just shortcuts for the same intents. Natural language is the primary interface.
 
 ## Commands
 
